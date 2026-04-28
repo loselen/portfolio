@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import { Container } from '$lib/components/container';
 	import { Button } from 'bits-ui';
 </script>
@@ -18,12 +19,13 @@
 					documentation here.
 				</p>
 			</div>
-			<Button.Root
-				class="w-fit rounded-md bg-orange-500 px-4 py-2 text-center font-semibold md:px-8"
-				href="/docs"
-			>
-				See my docs
-			</Button.Root>
+			<a href={resolve('/docs')}>
+				<Button.Root
+					class="w-fit rounded-md bg-orange-500 px-4 py-2 text-center font-semibold md:px-8"
+				>
+					See my docs
+				</Button.Root>
+			</a>
 		</div>
 	</Container.Content>
 </Container.Root>
