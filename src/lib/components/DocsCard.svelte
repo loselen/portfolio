@@ -17,22 +17,20 @@
 	} = $props();
 </script>
 
-<div class="flex gap-3 rounded-lg border border-zinc-500 p-3">
-	<div class="flex flex-col gap-3">
-		<div class="h-24 w-32 rounded-lg border border-zinc-500"></div>
-		<div class="flex w-32 flex-row flex-wrap gap-1">
+<div class="flex flex-col rounded-lg border border-zinc-500">
+	<div class="h-32 w-full rounded-t-lg outline outline-zinc-500 md:h-40"></div>
+	<div class="flex flex-col gap-3 p-4">
+		<div class="flex w-full flex-row flex-wrap gap-1">
 			{#each tags as tag (tag.name)}
 				<p class="w-fit rounded-full px-2 text-xs" style="background-color: {tag.color};">
 					#{tag.name}
 				</p>
 			{/each}
 		</div>
-	</div>
-	<div class="flex flex-col gap-2">
 		<div class="flex flex-col gap-1">
-			<h2 class="text-base leading-5 font-semibold">{title}</h2>
-			<p class="text-xs text-zinc-400">{date}</p>
+			<h2 class="text-base leading-5 font-semibold md:text-lg">{title}</h2>
+			<p class="text-xs text-zinc-400 md:text-sm">{date}</p>
 		</div>
-		<p>{description}</p>
+		<p class="text-zinc-300">{description}</p>
 	</div>
 </div>

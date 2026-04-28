@@ -6,14 +6,14 @@
 </script>
 
 <Container.Root>
-	<Container.Content class="flex flex-col gap-8 py-16 text-sm">
-		<div class="flex items-center gap-2">
+	<Container.Content class="flex flex-col gap-8 py-16 text-sm md:w-5xl md:text-base">
+		<div class="flex items-center gap-2 md:gap-4">
 			<a href={resolve('/')}>
-				<ArrowLeft size={32} />
+				<ArrowLeft class="size-8 md:size-10" />
 			</a>
-			<h1 class="text-2xl">Learning Docs</h1>
+			<h1 class="text-2xl md:text-3xl">Learning Docs</h1>
 		</div>
-		<div class="flex flex-col gap-3">
+		<div class="flex flex-col gap-3 md:grid md:grid-cols-2">
 			<DocsCard
 				title="VGG vs MLP on CIFAR-10: A Comparative Study"
 				description="Exploring the performance gap between a simple multi-layer perceptron and a deep convolutional network on the CIFAR-10 benchmark. Covers training setup, accuracy curves, and overfitting behavior."
